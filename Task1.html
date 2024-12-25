@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-commerce Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 60px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .navbar.scrolled {
+            background-color: #555;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: white;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url(images/2593045.jpg) no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeIn 2s ease 0.5s;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: fadeIn 2s ease 1s;
+        }
+
+        .hero button:hover {
+            background-color: #ff3b3b;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .products {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        .product p {
+            color: #555;
+            margin: 10px 15px;
+        }
+
+        .product button {
+            padding: 10px 20px;
+            margin: 15px;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="logo">ShopEasy</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="hero">
+        <h1>Welcome to ShopEasy</h1>
+        <p>Your one-stop shop for all your needs</p>
+        <button>Shop Now</button>
+    </div>
+    <div class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/imresizer-1735114373974.jpg" alt="Product 1">
+                <h3>Smartphone X1</h3>
+                <p>The latest smartphone with powerful features and sleek design.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/BDK-Smart-Watch-S7-Black-300x300-1.png" alt="Product 2">
+                <h3>Smartwatch Z</h3>
+                <p>Stay connected and track your fitness with the Smartwatch Z.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/beats_by_dr_dre_mhdm2am_a_studio_wireless_over_ear_headphones_gold_1098356.jpg" alt="Product 3">
+                <h3>Wireless Headphones</h3>
+                <p>Enjoy high-quality sound with these comfortable wireless headphones.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/81xAOjTSsxL._AC_SL1500_.jpg" alt="Product 4">
+                <h3>Bluetooth Speaker</h3>
+                <p>Portable Bluetooth speaker with crystal-clear sound for any occasion.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/lenovo_81lw001nus_l340_ryz_5_3500u_1477616.jpg" alt="Product 5">
+                <h3>Laptop Pro 15</h3>
+                <p>A high-performance laptop perfect for work and play.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/tv.webp" alt="Product 6">
+                <h3>4K Smart TV</h3>
+                <p>Enjoy cinematic visuals and sound with the latest 4K Smart TV.</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 ShopEasy. All Rights Reserved.</p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
